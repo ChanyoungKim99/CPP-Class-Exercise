@@ -1,11 +1,27 @@
 #include "Print2D.h"
 #include <iostream>
 
-int main()
+int Coordinate::GetLength() const
 {
-	Coordinate Print2d;
+	double length, result;
+	length = ((mXpoint * mXpoint) + (mYpoint * mYpoint));
+	result = sqrt(length);		// 이런 기능들은 사이트 cppreference 에서 확인
+	return result;
+}
 
-	std::cout << "원점에서 ";
-	Print2d.Coordinate::PrintPoint();
-	std::cout << "까지의 거리는 " << Print2d.Coordinate::GetLength() << " 입니다.";
+void Coordinate::PrintPoint() const
+{
+	std::cout << "( " << mXpoint << ", " << mYpoint << " )" << std::endl;
+}
+
+void Coordinate::SetPoint()
+{
+	int x, y;
+	std::cout << "x 좌표를 입력해주세요." << std::endl;
+	std::cin >> x;
+	mXpoint = x;
+
+	std::cout << "y 좌표를 입력해주세요." << std::endl;
+	std::cin >> y;
+	mYpoint = y;
 }

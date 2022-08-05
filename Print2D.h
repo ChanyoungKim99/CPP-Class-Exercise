@@ -5,21 +5,14 @@
 class Coordinate
 {
 private:
-	int mXpoint{4};
-	int mYpoint{3};
+	int mXpoint;
+	int mYpoint;
 
 public:
-	int GetLength() const
-	{
-		double length, result;
-		length = ((mXpoint * mXpoint) + (mYpoint * mYpoint));
-		result = sqrt(length);
-		return result;
-	}
-
-	void PrintPoint() const
-	{
-		std::cout << "( " << mXpoint << ", " << mYpoint << " )" << std::endl;
-	}
+	int GetLength() const;
+	void PrintPoint() const;
+	void SetPoint();
+	// 헤더와 소스의 구분은
+	// 클래스의 선언/정의 로 나눠야 한다.
 };
 
