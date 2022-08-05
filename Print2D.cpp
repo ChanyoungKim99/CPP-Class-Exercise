@@ -1,5 +1,6 @@
 #include "Print2D.h"
 #include <iostream>
+#include <cmath>
 
 int Coordinate::GetLength() const
 {
